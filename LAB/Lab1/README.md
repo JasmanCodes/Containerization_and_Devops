@@ -14,7 +14,7 @@ To deploy an Ubuntu-based Nginx web server in both a Virtual Machine and a Docke
 - Observe and compare CPU, memory usage, and startup time  
 - Understand practical differences between virtualization and containerization  
 
-![photo1](Screenshot 2026-01-28 025012.png)
+![photo1](LAB/Lab1/screenshots/Screenshot 2026-01-28 025012.png)
 
 
 ## ⚙️ Procedure

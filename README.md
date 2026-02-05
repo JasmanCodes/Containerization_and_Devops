@@ -7,6 +7,6 @@
 ---
 
 ## LAB
-![Experiment 1](Lab/LAB1.md)
+[Experiment 1](Lab/LAB1.md)
 
 ---

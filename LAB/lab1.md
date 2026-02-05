@@ -104,7 +104,7 @@ This section uses specific metrics captured during the experiment to contrast th
 * **Metric:** Number of background processes required to run the application.
 * **VM Command:** `htop`
 
-![VM Htop Process List](../screenshots/Lab1i/Screenshot2026-01-28030004.png)
+![VM Htop Process List](../Screenshots/Lab1_s/Screenshot2026-01-28030004.png)
 > **Observation (VM):** `htop` reveals a heavy process tree. Even though we only want Nginx, the VM is running `systemd`, `snapd`, `rsyslogd`, `polkitd`, and `sshd`. There are dozens of tasks running to support the OS.
 
 ![Docker Stats](../Screenshots/Lab1_s/docker_naginx_stats.png)

@@ -53,19 +53,19 @@ Once the VM was up, we established a connection to the guest OS.
 Inside the VM terminal, the package lists were updated, and the Nginx web server was installed.
 * **Commands:** `sudo apt update`, `sudo apt install -y nginx`
 
-![Nginx Installation](../Screenshots/Lab1_s/Picture7.png)
+
 ![Nginx Installation in VM](../Screenshots/Lab1_s/Picture8.png)
 > **Observation:** The `apt` package manager retrieves necessary archives. This process is slower than Docker as it installs dependencies for a full OS environment.
 
-![Nginx Installation Complete](../Screenshots/Lab1_s/Picture10.png)
+![Nginx Installation Complete](../Screenshots/Lab1_s/Picture9.png)
 > **Observation:** Installation is complete. Triggers for `man-db` and `ufw` are processed.
 
 ### **Step 4: Verification Inside VM**
 We verified the server was running locally within the guest OS.
 * **Command:** `curl localhost`
 
+![VM Internal Verification](../Screenshots/Lab1_s/Picture10.png)
 ![VM Internal Verification](../Screenshots/Lab1_s/Picture11.png)
-![VM Internal Verification](../Screenshots/Lab1_s/Picture12.png)
 > **Observation:** The `curl` command inside the VM returns the full HTML source of the "Welcome to nginx!" page.
 
 ---

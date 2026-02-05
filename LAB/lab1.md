@@ -76,14 +76,14 @@ We verified the server was running locally within the guest OS.
 The Docker engine was used to pull the Ubuntu image and deploy a containerized Nginx instance.
 * **Command:** `docker run -dp 8080:80 --name nginx-container nginx`
 
-![Docker Pull and Run](../Screenshots/Lab1_s/docker_pull_ubuntu.png)
+![Docker Pull and Run](../Screenshots/Lab1_s/Screenshot2026-01-28024924.png)
 > **Observation:** Docker pulls the image layers and starts the container nearly instantaneously.
 
 ### **Step 2: Verification**
 The Nginx server was verified by accessing the mapped port on the localhost.
 * **Command:** `curl localhost:8080`
 
-![Nginx Container Verification](../Screenshots/Lab1i/docker_curl_localhost.png)
+![Nginx Container Verification](../Screenshots/Lab1i/Screenshot2026-01-28025154.png)
 > **Observation:** The `curl` command confirms the Nginx "Welcome" page is active on port 8080.
 
 ---
@@ -107,13 +107,13 @@ This section uses specific metrics captured during the experiment to contrast th
 ![VM Htop Process List](../screenshots/Lab1i/Screenshot%202026-01-31%20101712.png)
 > **Observation (VM):** `htop` reveals a heavy process tree. Even though we only want Nginx, the VM is running `systemd`, `snapd`, `rsyslogd`, `polkitd`, and `sshd`. There are dozens of tasks running to support the OS.
 
-![Docker Stats](../screenshots/Lab1i/docker_naginx_stats.png)
+![Docker Stats](../Screenshots/Lab1_s/Screenshot2026-01-28030004.png)
 > **Observation (Container):** `docker stats` shows the container uses minimal resources because it *only* runs the application process (Nginx) and its direct dependencies.
 
 ### **C. Memory Usage**
 * **Metric:** RAM consumption.
 
-![VM Memory Usage](../screenshots/Lab1i/Screenshot%202026-01-31%20101534.png)
+![VM Memory Usage](../Screenshots/Lab1_s/Screenshot2026-01-28025836.png)
 > **Observation (VM):** The `free -h` command inside the VM shows it has allocated **957Mi** total, with **196Mi** used immediately by the OS kernel and services.
 
 > **Observation (Container):** Referring to the Docker Stats image above, the container consumes only **13.22MiB** of RAM.

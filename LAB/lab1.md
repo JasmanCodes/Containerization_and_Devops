@@ -39,33 +39,33 @@ The primary goals of this experiment are:
 Using Vagrant, an Ubuntu VM was initialized and started.
 * **Command:** `vagrant init ubuntu/jammy64` followed by `vagrant up`.
 
-![Vagrant Up Process](../screenshots/Lab1_s/Picture1..png)
+![Vagrant Up Process](../Screenshots/Lab1_s/Picture1..png)
 > **Observation:** The system downloads the base box (Ubuntu Jammy) and configures the VirtualBox provider. Port forwarding (2222 -> 22) is established.
 
 ### **Step 2: Accessing the VM (SSH)**
 Once the VM was up, we established a connection to the guest OS.
 * **Command:** `vagrant ssh`
 
-![VM SSH Connection](../screenshots/Lab1_s/Picture2.png)
+![VM SSH Connection](../Screenshots/Lab1_s/Picture2.png)
 > **Observation:** Successful login to the Ubuntu 22.04.5 LTS environment.
 
 ### **Step 3: Installing Nginx**
 Inside the VM terminal, the package lists were updated, and the Nginx web server was installed.
 * **Commands:** `sudo apt update`, `sudo apt install -y nginx`
 
-![Nginx Installation](../screenshots/Lab1_s/Picture7.png)
-![Nginx Installation in VM](../screenshots/Lab1_s/Picture8.png)
+![Nginx Installation](../Screenshots/Lab1_s/Picture7.png)
+![Nginx Installation in VM](../Screenshots/Lab1_s/Picture8.png)
 > **Observation:** The `apt` package manager retrieves necessary archives. This process is slower than Docker as it installs dependencies for a full OS environment.
 
-![Nginx Installation Complete](../screenshots/Lab1_s/Picture10.png)
+![Nginx Installation Complete](../Screenshots/Lab1_s/Picture10.png)
 > **Observation:** Installation is complete. Triggers for `man-db` and `ufw` are processed.
 
 ### **Step 4: Verification Inside VM**
 We verified the server was running locally within the guest OS.
 * **Command:** `curl localhost`
 
-![VM Internal Verification](../screenshots/Lab1_s/Picture11.png)
-![VM Internal Verification](../screenshots/Lab1_s/Picture12.png)
+![VM Internal Verification](../Screenshots/Lab1_s/Picture11.png)
+![VM Internal Verification](../Screenshots/Lab1_s/Picture12.png)
 > **Observation:** The `curl` command inside the VM returns the full HTML source of the "Welcome to nginx!" page.
 
 ---
@@ -76,14 +76,14 @@ We verified the server was running locally within the guest OS.
 The Docker engine was used to pull the Ubuntu image and deploy a containerized Nginx instance.
 * **Command:** `docker run -dp 8080:80 --name nginx-container nginx`
 
-![Docker Pull and Run](../screenshots/Lab1_s/docker_pull_ubuntu.png)
+![Docker Pull and Run](../Screenshots/Lab1_s/docker_pull_ubuntu.png)
 > **Observation:** Docker pulls the image layers and starts the container nearly instantaneously.
 
 ### **Step 2: Verification**
 The Nginx server was verified by accessing the mapped port on the localhost.
 * **Command:** `curl localhost:8080`
 
-![Nginx Container Verification](../screenshots/Lab1i/docker_curl_localhost.png)
+![Nginx Container Verification](../Screenshots/Lab1i/docker_curl_localhost.png)
 > **Observation:** The `curl` command confirms the Nginx "Welcome" page is active on port 8080.
 
 ---
@@ -96,7 +96,7 @@ This section uses specific metrics captured during the experiment to contrast th
 * **Metric:** Time taken to reach a usable state.
 * **VM Command:** `systemd-analyze`
 
-![VM Boot Time Analysis](../screenshots/Lab1i/Screenshot%202026-01-31%20101605.png)
+![VM Boot Time Analysis](../Screenshots/Lab1i/Screenshot%202026-01-31%20101605.png)
 > **Observation (VM):** The VM took **36.819 seconds** to finish startup (6.9s kernel + 29.8s userspace).
 > **Observation (Container):** The container started in **less than 1 second** (refer to Docker output in Sec 5).
 

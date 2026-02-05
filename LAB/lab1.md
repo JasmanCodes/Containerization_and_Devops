@@ -39,14 +39,14 @@ The primary goals of this experiment are:
 Using Vagrant, an Ubuntu VM was initialized and started.
 * **Command:** `vagrant init ubuntu/jammy64` followed by `vagrant up`.
 
-![Vagrant Up Process](../Screenshots/Lab1_s/Picture1..png)
+![Vagrant Up Process](../Screenshots/Lab4_s/Picture1..png)
 > **Observation:** The system downloads the base box (Ubuntu Jammy) and configures the VirtualBox provider. Port forwarding (2222 -> 22) is established.
 
 ### **Step 2: Accessing the VM (SSH)**
 Once the VM was up, we established a connection to the guest OS.
 * **Command:** `vagrant ssh`
 
-![VM SSH Connection](../Screenshots/Lab1_s/Picture2.png)
+![VM SSH Connection](../Screenshots/Lab5_s/Picture2.png)
 > **Observation:** Successful login to the Ubuntu 22.04.5 LTS environment.
 
 ### **Step 3: Installing Nginx**

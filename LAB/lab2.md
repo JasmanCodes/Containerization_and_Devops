@@ -29,7 +29,7 @@ The container is started in detached mode with host port 8080 mapped to containe
 * **Command:** `docker run -dp 8080:80 nginx`
 
 **Execution Screenshot:**
-![Docker Run Nginx](../Screenshots/Lab2_s/Lab2.2.png)
+![Docker Run Nginx](../Screenshots/Lab2_s/lab2.2.png)
 
 ---
 
@@ -38,7 +38,7 @@ To confirm the container is active and check the assigned status and ports, the 
 * **Command:** `docker ps`
 
 **Execution Screenshot:**
-![Docker PS Output](../Screenshots/Lab2_s/Lab2.3.png)
+![Docker PS Output](../Screenshots/Lab2_s/lab2.3.png)
 
 ---
 
@@ -48,10 +48,10 @@ To manage the lifecycle, the container is stopped first and then removed using i
 * **Remove Command:** `docker rm 5ee0a6fcf8b6` 
 
 **Stop Screenshot:**
-![Docker Stop](../Screenshots/Lab2_s/Lab2.4.png)
+![Docker Stop](../Screenshots/Lab2_s/lab2.4.png)
 
 **Remove Screenshot:**
-![Docker Remove Container](../Screenshots/Lab2_s/Lab2.5.png)
+![Docker Remove Container](../Screenshots/Lab2_s/lab2.5.png)
 
 ---
 
@@ -60,7 +60,7 @@ The final step in the lifecycle management is removing the image from the local 
 * **Command:** `docker rmi nginx`
 
 **Execution Screenshot:**
-![Docker Remove Image](../Screenshots/Lab2_s/Lab2.6.png)
+![Docker Remove Image](../Screenshots/Lab2_s/lab2.6.png)
 
 ---
 

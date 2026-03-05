@@ -91,7 +91,7 @@ cd my-flask-app
 
 **`Dockerfile.multistage`**  
 
-![](../screenshots/Lab4i/15.png)
+![](../Screenshots/Lab4_s/lab4.e.png)
 
 ### Step 3: Build and Compare
 
@@ -121,7 +121,7 @@ docker run -d -p 5000:5000 username/my-flask-app:latest
 
 ### Step 1: Node.js Application
 
-![](../screenshots/Lab4i/19.png)
+![](../Screenshots/Lab4_s/lab4.f.png)
 
 **`app.js`**  
 
@@ -137,8 +137,7 @@ docker run -d -p 5000:5000 username/my-flask-app:latest
 
 ### Step 3: Build and Run
 
-![](../screenshots/Lab4i/24.png)
-![](../screenshots/Lab4i/25.png)
+![](../Screenshots/Lab4_s/lab4.13.png)
 
 ---
 

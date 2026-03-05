@@ -21,7 +21,7 @@ cd my-flask-app
 
 **`app.py`**  
 
-![](../screenshots/Lab4i/4.png)
+![](../Screenshots/Lab4_s/lab4.a.png)
 
 **`requirements.txt`**  
 

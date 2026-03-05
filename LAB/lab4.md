@@ -41,7 +41,7 @@ cd my-flask-app
 
 **`.dockerignore`**  
 
-![](../screenshots/Lab4i/7.png)
+![](../Screenshots/Lab4_s/lab4.d.png)
 
 ### Step 2: Why .dockerignore is Important
 * Prevents unnecessary files from being copied

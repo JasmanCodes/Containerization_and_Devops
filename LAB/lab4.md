@@ -25,13 +25,13 @@ cd my-flask-app
 
 **`requirements.txt`**  
 
-![](../screenshots/Lab4i/5.png)
+![](../Screenshots/Lab4_s/lab4.b.png)
 
 ### Step 2: Create Dockerfile
 
 **`Dockerfile`**  
 
-![](../screenshots/Lab4i/6.png)
+![](../Screenshots/Lab4_s/lab4.c.png)
 
 ---
 

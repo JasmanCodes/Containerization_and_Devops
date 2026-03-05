@@ -125,15 +125,15 @@ docker run -d -p 5000:5000 username/my-flask-app:latest
 
 **`app.js`**  
 
-![](../screenshots/Lab4i/20.png)
+![](../Screenshots/Lab4_s/lab4.g.png)
 
 **`package.json`**  
 
-![](../screenshots/Lab4i/21.png)
+![](../Screenshots/Lab4_s/lab4.h.png)
 
 ### Step 2: Node.js Dockerfile
 
-![](../screenshots/Lab4i/22.png)
+![](../Screenshots/Lab4_s/lab4.i.png)
 
 ### Step 3: Build and Run
 

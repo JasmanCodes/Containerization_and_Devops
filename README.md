@@ -14,6 +14,7 @@
 - [Experiment 1](LAB/lab1.md)
 - [Experiment 2](LAB/lab2.md)
 - [Experiment 3](LAB/lab3.md)
+- [Experiment 4](LAB/lab4.md)
 
 
 ---

@@ -55,16 +55,16 @@ cd my-flask-app
 
 ### Step 1: Basic Build Command
 
-![](../screenshots/Lab4i/9.png)
-![](../screenshots/Lab4i/10.png)
+![](../Screenshots/Lab4_s/lab4.2.png)
+![](../Screenshots/Lab4_s/lab4.3.png)
 
 ### Step 2: Tagging Images
 
-![](../screenshots/Lab4i/11.png)
+![](../Screenshots/Lab4_s/lab4.4.png)
 
 ### Step 3: View Image Details
 
-![](../screenshots/Lab4i/12.png)
+![](../Screenshots/Lab4_s/lab4.5.png)
 
 ---
 
@@ -72,11 +72,11 @@ cd my-flask-app
 
 ### Step 1: Run Container
 
-![](../screenshots/Lab4i/13.png)
+![](../Screenshots/Lab4_s/lab4.7.png)
 
 ### Step 2: Manage Containers
 
-![](../screenshots/Lab4i/14.png)
+![](../Screenshots/Lab4_s/lab4.8.png)
 
 ---
 
@@ -95,8 +95,7 @@ cd my-flask-app
 
 ### Step 3: Build and Compare
 
-![](../screenshots/Lab4i/16.png)
-![](../screenshots/Lab4i/17.png)
+![](../Screenshots/Lab4_s/lab4.9.png)
 
 ---
 
@@ -104,8 +103,7 @@ cd my-flask-app
 
 ### Step 1: Prepare for Publishing
 
-![](../screenshots/Lab4i/18.png)
-![](../screenshots/Lab4i/23.png)
+![](../Screenshots/Lab4_s/lab4.10.png)
 
 ### Step 2: Pull and Run from Docker Hub
 

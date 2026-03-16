@@ -135,7 +135,7 @@ Furthermore, Macvlan introduces a "host isolation" issue where the Docker host c
 
 The external Ipvlan network was created manually using the following command, tailored to the host's network configuration (`172.29.144.0/20`):
 
-![Network Creation command, Correction: Ipvalan was used after issues with macvlan. command is the same except macvlan is replace with ipvlan](../Theory/Project_assignment,midsem/8.png)
+![Network Creation command, Correction: Ipvalan was used after issues with macvlan. command is the same except macvlan is replace with ipvlan](../Screenshots/proeject_s/project2.png)
 Network Creation command, Correction: Ipvalan was used after issues with macvlan. command is the same except macvlan is replace with ipvlan
 
 ## 6. Orchestration with Docker Compose
@@ -162,14 +162,13 @@ The functionality of the entire system was verified through the following steps.
 
 The command `docker network inspect ipvlan_net` confirms that both containers are successfully connected to the network and have received their assigned static IP addresses.
 
-![Docker network Inspect](../Theory/Project_assignment,midsem/14.png)
-![](../Theory/Project_assignment,midsem/15.png)
+![Docker network Inspect](../Screenshots/proeject_s/project3.png)
 
 ### Container LAN Accessibility
 
 The backend service was successfully accessed from a browser on the Docker host machine by navigating to its assigned LAN IP: **`http://172.29.150.11:3000/health`**. This confirms that the Ipvlan networking is configured correctly and the container is reachable from the local network.
 
-![](../Theory/Project_assignment,midsem/13.png)
+![](../Screenshots/proeject_s/project4.png)
 
 ### Volume Persistence Test
 
@@ -179,10 +178,10 @@ The persistence of database data was confirmed with the following test:
 3.  **Recreate Stack**: The stack was brought back up using `docker-compose up -d`. New containers were created.
 4.  **Fetch Data**: A `GET` request to `/api/records` successfully retrieved the original record, proving that the data persisted in the `pg_persistent_data` volume across the container's lifecycle.
 
-![adding a data point in the database](../Theory/Project_assignment,midsem/16.png)
+
 adding a data point in the database
 
-![composing down and back up again (removing the containers and starting them back up again)](../Theory/Project_assignment,midsem/17.png)
+![composing down and back up again (removing the containers and starting them back up again)](../Screenshots/proeject_s/project5.png)
 composing down and back up again (removing the containers and starting them back up again)
 
 ![Data still persisted!!!](../Theory/Project_assignment,midsem/18.png)

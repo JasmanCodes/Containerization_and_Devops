@@ -119,7 +119,7 @@ The optimization techniques yield a significant reduction in image size.
 | Unoptimized Database| `postgres:15` | ~400 MB | - |
 | **Optimized Database** | `postgres:15-alpine` | **~240 MB** | **40% size reduction.** |
 
-![ScreenShot](../Theory/Project_assignment,midsem/19.png)
+![ScreenShot](../Screenshots/proeject_s/project1.png)
 
 ## 5. Networking: Ipvlan Configuration
 

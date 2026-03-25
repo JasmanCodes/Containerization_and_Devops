@@ -14,30 +14,30 @@ kubectl run apache-pod --image=httpd
 ```bash
 kubectl get pods
 ```
-![](1.1.png)
+![](../Screenshots/class_assign_s/2.png)
 
 #### 1.2 Inspecting the pod 
 ```bash
 kubectl describe pod apache-pod
 ```
-![](2.png)
+![](../Screenshots/class_assign_s/3.png)
 
 #### 1.3 Accessing the pod 
 ```bash
 kubectl port-forward pod/apache-pod 8081:80
 ```
-![](4.png)
+![](../Screenshots/class_assign_s/4.png)
 - Then opening in browser using
 ```bash
 http://localhost:8081
 ```
-![](3.png)
+![](../Screenshots/class_assign_s/5.png)
 
 #### 1.4 Deleting the pod
 ```bash
 kubectl delete pod apache-pod
 ```
-![](5.png)
+![](../Screenshots/class_assign_s/6.png)
 
 ### 2. Convert to deployment
 
@@ -51,7 +51,7 @@ kubectl create deployment apache --image=httpd
 kubectl get deployments
 kubectl get pods
 ```
-![](7.png)
+![](../Screenshots/class_assign_s/7.png)
 - To allow traffic to reach pods, expose the deployment using a Service. This provides a stable IP and acts as a basic load balancer.
 ```bash
 kubectl expose deployment apache --port=80 --type=NodePort
@@ -60,8 +60,8 @@ and then for accessing
 ```bash
 kubectl port-forward service/apache 8082:80
 ```
-![](8.png)
-![](9.png)
+![](../Screenshots/class_assign_s/8.png)
+![](../Screenshots/class_assign_s/9.png)
 
 ### 3. Modifying behaviour
 
@@ -75,7 +75,7 @@ kubectl scale deployment apache --replicas=2
 ```bash
 kubectl get pods
 ```
-![](10.png)
+![](../Screenshots/class_assign_s/10.png)
 
 - Using port-forwarding to bridge the cluster service to local machine to verify traffic flow
 ```bash
@@ -83,7 +83,7 @@ kubectl port-forward service/apache 8080:80
 ```
 
 - by monitoring logs with ```kubectl logs -l app=apache -f --prefix``` its  confirmed that successive browser refreshes at localhost:8080 were distributed across both running pods.
-![](11.png)
+![](../Screenshots/class_assign_s/11.png)
 
 ### 4. Debugging scenario + Cleanup
 - To simulate a real-world troubleshooting scenario I intentionally updated the deployment with a non-existent image to observe how Kubernetes handles errors
@@ -92,14 +92,14 @@ kubectl port-forward service/apache 8080:80
 ```bash
 kubectl set image deployment/apache httpd=wrongimage
 ```
-![](12.png)
+![](../Screenshots/class_assign_s/12.png)
 
 - Using the describe command, I inspected the events to identify why the pod failed to start
 ```bash
 kubectl describe pod <pod-name>
 ```
 
-![](14.png)
+![](../Screenshots/class_assign_s/13.png)
 - Findings:
 
 - Warning Failed: Kubernetes tried to pull = non-existent-image:latest.
@@ -112,7 +112,7 @@ kubectl describe pod <pod-name>
 ```bash
 kubectl set image deployment/apache httpd=httpd
 ```
-![](15.png)
+![](../Screenshots/class_assign_s/14.png)
 
 - To verify the internal configuration, I entered the container's shell to inspect the file system where Apache serves content
 ```bash
@@ -120,14 +120,12 @@ kubectl exec -it <pod-name> -- /bin/bash
 ls /usr/local/apache2/htdocs
 exit
 ```
-![](16.png)
-
-![](17.png)
+![](../Screenshots/class_assign_s/15.png)
 
 - Once the testing was complete, I deleted the deployment and the service to release cluster resources
 ```bash
 kubectl delete deployment apache
 kubectl delete service apache
 ```
-![](18.png)
-![](19.png)
+![](../Screenshots/class_assign_s/16.png)
+![](../Screenshots/class_assign_s/17.png)

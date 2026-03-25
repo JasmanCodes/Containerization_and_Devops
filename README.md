@@ -19,6 +19,7 @@
 
 ## THEORY
 - [ProjectAssignment 1](project_assignment/report.md)
+- [Class_Assignment](CLASSWORK/class_assign.md)
 
 
 

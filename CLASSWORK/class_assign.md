@@ -9,7 +9,7 @@
 ```bash
 kubectl run apache-pod --image=httpd
 ```
-![](1.png)
+![](../Screenshots/class_assign_s/1.png)
 - To verify The following command was used
 ```bash
 kubectl get pods

@@ -198,14 +198,6 @@ docker logs --tail 100 container-name
 docker logs -t container-name
 ![](../screenshots/Lab5i/21.png)
 
-# Logs since specific time
-docker logs --since 2024-01-15 container-name
-
-# Combine options
-docker logs --tail 50 -t container-name
-![](../screenshots/Lab5i/22.png)
-
-
 ### Lab 4: Container Inspection
 
 # Detailed container info
@@ -362,11 +354,6 @@ Still need -p to publish
 * PostgreSQL Database (port 5432)
 * Redis Cache (port 6379)
 * All connected via custom network
-
-**Implementation:**
-
-![](../screenshots/Lab5i/41.png)
-![](../screenshots/Lab5i/42.png)
 
 **Monitoring Commands:**
 ```bash

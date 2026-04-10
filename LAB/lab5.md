@@ -95,21 +95,24 @@ docker run -d \
 
 **Method 2: Using --env-file**
 
-![](../screenshots/Lab5i/6.png)
+![](../Screenshots/Lab5_s/lab5.62.png)
 
 **Method 3: In Dockerfile**
 
-![](../screenshots/Lab5i/7.png)
+![](../Screenshots/Lab5_s/lab5.63.png)
+
 
 ### Lab 2: Environment Variables in Applications
 
 **Python Flask Example (`app.py`)**
 
-![](../screenshots/Lab5i/8.png)
+![](../Screenshots/Lab5_s/lab5.64.png)
+
 
 **Dockerfile with Environment Variables**
 
-![](../screenshots/Lab5i/9.png)
+![](../Screenshots/Lab5_s/lab5.65.png)
+
 
 ### Lab 3: Test Environment Variables
 ```bash
@@ -139,38 +142,46 @@ curl http://localhost:5000/config
 **`docker stats` - Real-time Container Metrics**
 
 # Live stats for all containers
-![](../screenshots/Lab5i/10.png)
+![](../Screenshots/Lab5_s/lab5.66.png)
+
 
 # Specific format output
-![](../screenshots/Lab5i/11.png)
+![](../Screenshots/Lab5_s/lab5.67.png)
+
 
 # No-stream (single snapshot)
-![](../screenshots/Lab5i/12.png)
+![](../Screenshots/Lab5_s/lab5.68.png)
+
 
 # All containers (including stopped)
-![](../screenshots/Lab5i/13.png)
+![](../Screenshots/Lab5_s/lab5.69.png)
+
 
 
 **Useful Format Options:**
 
 # Custom format
 docker stats --format "Container: {{.Name}} | CPU: {{.CPUPerc}} | Memory: {{.MemPerc}}"
-![](../screenshots/Lab5i/14.png)
+![](../Screenshots/Lab5_s/lab5.70.png)
+
 
 # JSON output
 docker stats --format json --no-stream
-![](../screenshots/Lab5i/15.png)
+![](../Screenshots/Lab5_s/lab5.71.png)
+
 
 # Wide output
 docker stats --no-stream --no-trunc
-![](../screenshots/Lab5i/16.png)
+![](../Screenshots/Lab5_s/lab5.72.png)
+
 
 
 ### Lab 2: `docker top` Process Monitoring
 
 # View processes in container
 docker top container-name
-![](../screenshots/Lab5i/17.png)
+![](../Screenshots/Lab5_s/lab5.73.png)
+
 
 # View with full command line
 docker top container-name -ef
@@ -178,42 +189,49 @@ docker top container-name -ef
 
 # Compare with host processes
 ps aux | grep docker
-![](../screenshots/Lab5i/18.png)
+![](../Screenshots/Lab5_s/lab5.74.png)
+
 
 
 ### Lab 3: `docker logs` Application Logs
 
 # View logs
 docker logs container-name
-![](../screenshots/Lab5i/19.png)
+![](../Screenshots/Lab5_s/lab5.75.png)
+
 
 # Follow logs (like tail -f)
 docker logs -f container-name
 
 # Last N lines
 docker logs --tail 100 container-name
-![](../screenshots/Lab5i/20.png)
+![](../Screenshots/Lab5_s/lab5.76.png)
+
 
 # Logs with timestamps
 docker logs -t container-name
-![](../screenshots/Lab5i/21.png)
+![](../Screenshots/Lab5_s/lab5.77.png)
+
 
 ### Lab 4: Container Inspection
 
 # Detailed container info
 docker inspect container-name
-![](../screenshots/Lab5i/23.png)
+![](../Screenshots/Lab5_s/lab5.78.png)
+
 
 # Specific information
 docker inspect --format='{{.State.Status}}' container-name
 docker inspect --format='{{.NetworkSettings.IPAddress}}' container-name
 docker inspect --format='{{.Config.Env}}' container-name
-![](../screenshots/Lab5i/24.png)
+![](../Screenshots/Lab5_s/lab5.79.png)
+
 
 # Resource limits
 docker inspect --format='{{.HostConfig.Memory}}' container-name
 docker inspect --format='{{.HostConfig.NanoCpus}}' container-name
-![](../screenshots/Lab5i/25.png)
+![](../Screenshots/Lab5_s/lab5.80.png)
+
 
 
 ### Lab 5: Events Monitoring
@@ -235,8 +253,10 @@ docker events --format '{{.Type}} {{.Action}} {{.Actor.Attributes.name}}'
 
 ### Lab 6: Practical Monitoring Script (`monitor.sh`)
 
-![](../screenshots/Lab5i/26.png)
-![](../screenshots/Lab5i/27.png)
+![](../Screenshots/Lab5_s/lab5.81.png)
+
+![](../Screenshots/Lab5_s/lab5.82.png)
+
 
 ---
 
@@ -248,7 +268,7 @@ docker events --format '{{.Type}} {{.Action}} {{.Actor.Attributes.name}}'
 
 # Default networks
 docker network ls
-![](../screenshots/Lab5i/28.png)
+![](../Screenshots/Lab5_s/lab5.83.png)
 
 
 ### Lab 2: Network Types Explained
@@ -260,7 +280,8 @@ docker network create my-network
 
 # Inspect network
 docker network inspect my-network
-![](../screenshots/Lab5i/29.png)
+![](../Screenshots/Lab5_s/lab5.84.png)
+
 
 # Run containers on custom network
 docker run -d --name web1 --network my-network nginx
@@ -268,16 +289,19 @@ docker run -d --name web2 --network my-network nginx
 
 # Containers can communicate using container names
 docker exec web1 curl http://web2
-![](../screenshots/Lab5i/31.png)
+![](../Screenshots/Lab5_s/lab5.85.png)
+
 
 
 **2. Host Network**
 
-![](../screenshots/Lab5i/32.png)
+![](../Screenshots/Lab5_s/lab5.86.png)
+
 
 **3. None Network**
 
-![](../screenshots/Lab5i/33.png)
+![](../Screenshots/Lab5_s/lab5.87.png)
+
 
 **4. Overlay Network (Swarm)**
 ```bash
@@ -306,21 +330,24 @@ docker network prune
 
 ### Lab 4: Multi-Container Application Example
 
-![](../screenshots/Lab5i/34.png)
+![](../Screenshots/Lab5_s/lab5.88.png)
 
 ### Lab 5: Network Inspection & Debugging
 
 # Inspect network
 docker network inspect bridge
-![](../screenshots/Lab5i/35.png)
+![](../Screenshots/Lab5_s/lab5.89.png)
+
 
 # Check container IP
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container-name
-![](../screenshots/Lab5i/36.png)
+![](../Screenshots/Lab5_s/lab5.90.png)
+
 
 # View network ports
 docker port container-name
-![](../screenshots/Lab5i/37.png)
+![](../Screenshots/Lab5_s/lab5.91.png)
+
 
 
 ### Lab 6: Port Publishing vs Exposing
@@ -330,15 +357,18 @@ docker run -d -p 80:8080 --name app1 nginx
 
 # Dynamic port publishing
 docker run -d -p 8080 --name app2 nginx
-![](../screenshots/Lab5i/38.png)
+![](../Screenshots/Lab5_s/lab5.91.png)
+
 
 # Multiple ports
 docker run -d -p 80:80 -p 443:443 --name app3 nginx
-![](../screenshots/Lab5i/39.png)
+![](../Screenshots/Lab5_s/lab5.92.png)
+
 
 # Specific host IP
 docker run -d -p 127.0.0.1:8080:80 --name app4 nginx
-![](../screenshots/Lab5i/40.png)
+![](../Screenshots/Lab5_s/lab5.93.png)
+
 
 EXPOSE in Dockerfile (metadata only)
 Dockerfile: EXPOSE 80

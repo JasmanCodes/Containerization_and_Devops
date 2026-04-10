@@ -291,16 +291,9 @@ docker run -d --name web2 --network my-network nginx
 docker exec web1 curl http://web2
 ![](../Screenshots/Lab5_s/lab5.85.png)
 
-
-
-**2. Host Network**
-
-![](../Screenshots/Lab5_s/lab5.86.png)
-
-
 **3. None Network**
 
-![](../Screenshots/Lab5_s/lab5.87.png)
+![](../Screenshots/Lab5_s/lab5.86.png)
 
 
 **4. Overlay Network (Swarm)**
@@ -330,23 +323,23 @@ docker network prune
 
 ### Lab 4: Multi-Container Application Example
 
-![](../Screenshots/Lab5_s/lab5.88.png)
+![](../Screenshots/Lab5_s/lab5.87.png)
 
 ### Lab 5: Network Inspection & Debugging
 
 # Inspect network
 docker network inspect bridge
-![](../Screenshots/Lab5_s/lab5.89.png)
+![](../Screenshots/Lab5_s/lab5.88.png)
 
 
 # Check container IP
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container-name
-![](../Screenshots/Lab5_s/lab5.90.png)
+![](../Screenshots/Lab5_s/lab5.89.png)
 
 
 # View network ports
 docker port container-name
-![](../Screenshots/Lab5_s/lab5.91.png)
+![](../Screenshots/Lab5_s/lab5.90.png)
 
 
 

@@ -28,25 +28,25 @@ docker exec test-container cat /data/message.txt
 
 **1. Anonymous Volumes**
 
-![](../screenshots/Lab5i/1.png)
+![](../Screenshots/Lab5_s/lab5.2.png)
 
 **2. Named Volumes**
 
-![](../screenshots/Lab5i/2.png)
+![](../Screenshots/Lab5_s/lab5.3.png)
 
 **3. Bind Mounts (Host Directory)**
 
-![](../screenshots/Lab5i/3.png)
+![](../Screenshots/Lab5_s/lab5.4.png)
 
 ### Lab 3: Practical Volume Examples
 
 **Example 1: Database with Persistent Storage**
 
-![](../screenshots/Lab5i/4.png)
+![](../Screenshots/Lab5_s/lab5.5.png)
 
 **Example 2: Web App with Configuration Files**
 
-![](../screenshots/Lab5i/5.png)
+![](../Screenshots/Lab5_s/lab5.6.png)
 
 ### Lab 4: Volume Management Commands
 ```bash

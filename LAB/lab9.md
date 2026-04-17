@@ -39,13 +39,13 @@ sudo apt install ansible -y
 ansible --version
 ansible localhost -m ping
 ```
-![](../Screenshots/Lab9_s/lab6_1.1.png)  
-![](../Screenshots/Lab9_s/lab6_1.2.png) 
-![](../Screenshots/Lab9_s/lab6_1.3.png) 
+![](../Screenshots/Lab9_s/lab9_1.1.png)  
+![](../Screenshots/Lab9_s/lab9_1.2.png) 
+![](../Screenshots/Lab9_s/lab9_1.3.png) 
 
-![](../Screenshots/Lab9_s/lab6_2.png) 
+![](../Screenshots/Lab9_s/lab9_2.png) 
 
-![](../Screenshots/Lab9_s/lab6_3.png) 
+![](../Screenshots/Lab9_s/lab9_3.png) 
 
 ### Step 2: Generate SSH Key
 ```bash
@@ -53,16 +53,16 @@ ssh-keygen -t rsa -b 4096
 cp ~/.ssh/id_rsa.pub .
 cp ~/.ssh/id_rsa .
 ```
-![](../Screenshots/Lab9_s/lab6_4.png) 
+![](../Screenshots/Lab9_s/lab9_4.png) 
 ### Step 3: Create Dockerfile
 
-![](../Screenshots/Lab9_s/lab6_5.png) 
+![](../Screenshots/Lab9_s/lab9_5.png) 
 
 ### Step 4: Build Docker Image
 ```bash
 docker build -t ubuntu-server .
 ```
-![](../Screenshots/Lab9_s/lab6_6.png) 
+![](../Screenshots/Lab9_s/lab9_6.png) 
 
 ### Step 5: Test SSH
 ```bash
@@ -70,14 +70,14 @@ docker run -d -p 2222:22 --name ssh-test-server ubuntu-server
 ssh root@localhost -p 2222
 ssh -i ~/.ssh/id_rsa root@localhost -p 2222
 ```
-![](../Screenshots/Lab9_s/lab6_7.png) 
+![](../Screenshots/Lab9_s/lab9_7.png) 
 
 ### Step 6: Remove Test Container
 ```bash
 docker stop ssh-test-server
 docker rm ssh-test-server
 ```
-![](../Screenshots/Lab9_s/lab6_8.png) 
+![](../Screenshots/Lab9_s/lab9_8.png) 
 
 ### Step 7: Run 4 Servers
 ```bash
@@ -85,17 +85,17 @@ for i in {1..4}; do
   docker run -d -p 220${i}:22 --name server${i} ubuntu-server
 done
 ```
-![](../Screenshots/Lab9_s/lab6_9.png) 
+![](../Screenshots/Lab9_s/lab9_9.png) 
 ### Step 8: Create Inventory
-![](../Screenshots/Lab9_s/lab6_10.1.png) 
-![](../Screenshots/Lab9_s/lab6_10.2.png) 
+![](../Screenshots/Lab9_s/lab9_10.1.png) 
+![](../Screenshots/Lab9_s/lab9_10.2.png) 
 
 
 ### Step 9: Test Connectivity\
 ```bash
 ansible all -i inventory.ini -m ping
 ```
-![](../Screenshots/Lab9_s/lab6_11.png) 
+![](../Screenshots/Lab9_s/lab9_11.png) 
 
 
 ### Step 10: Create Playbook
@@ -122,28 +122,28 @@ ansible all -i inventory.ini -m ping
         dest: /root/ansible_test.txt
         content: "Configured by Ansible on {{ inventory_hostname }}"
 ```
-![](../Screenshots/Lab9_s/lab6_12png) 
+![](../Screenshots/Lab9_s/lab9_12png) 
 
 
 ### Step 11: Run Playbook
 ```bash
 ansible-playbook -i inventory.ini update.yml
 ```
-![](../Screenshots/Lab9_s/lab6_13.png) 
+![](../Screenshots/Lab9_s/lab9_13.png) 
 
 
 ### Step 12: Verify Output
 ```bash
 ansible all -i inventory.ini -m command -a "cat /root/ansible_test.txt"
 ```
-![](../Screenshots/Lab9_s/lab6_14.png) 
+![](../Screenshots/Lab9_s/lab9_14.png) 
 
 
 ### Step 13: Cleanup
 ```bash
 for i in {1..4}; do docker rm -f server${i}; done
 ```
-![](../Screenshots/Lab9_s/lab6_15.png) 
+![](../Screenshots/Lab9_s/lab9_15.png) 
 
 
 ## Conclusion

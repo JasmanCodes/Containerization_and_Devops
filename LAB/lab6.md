@@ -75,23 +75,23 @@ services:
 
 **Step 1: Run Nginx Using Docker Run**
 Execute:  
-![](../Screenshots/Lab6_s/lab6.1.png)
+![](../screenshots/Lab6_s/lab6_1.png)  
 Verify: `docker ps`  
-![](../Screenshots/Lab6_s/lab6.2.png)
+![](../screenshots/Lab6i/2.png)
 Access: `http://localhost:8081`  
-![](../Screenshots/Lab6_s/lab6.3.png) 
+![](../screenshots/Lab6i/3.png)   
 Stop and remove container:  
-![](../Screenshots/Lab6_s/lab6.4.png)
+![](../screenshots/Lab6i/4.png) 
 
 **Step 2: Run Same Setup Using Docker Compose**
 Create `docker-compose.yml`:  
-![](../Screenshots/Lab6_s/lab6.5.png)
+![](../screenshots/Lab6i/5.png) 
 Run: `docker compose up -d`  
-![](../Screenshots/Lab6_s/lab6.6.png)
+![](../screenshots/Lab6i/6.png)  
 Verify: `docker compose ps`  
-![](../Screenshots/Lab6_s/lab6.7.png)
+![](../screenshots/Lab6i/7.png) 
 Stop: `docker compose down`  
-![](../Screenshots/Lab6_s/lab6.8.png)
+![](../screenshots/Lab6i/8.png) 
 
 ---
 
@@ -103,20 +103,20 @@ Objective: Deploy WordPress with MySQL using:
 **A. Using Docker Run**
 1. Create network: `docker network create wp-net`
 2. Run MySQL:  
-![](../Screenshots/Lab6_s/lab6.9.png)
+![](../screenshots/Lab6i/9.png) 
 3. Run WordPress:  
-![](../Screenshots/Lab6_s/lab6.10.png)
+![](../screenshots/Lab6i/10.png)  
 
 Test: `http://localhost:8082`
-![](../Screenshots/Lab6_s/lab6.11.png)
+![](../screenshots/Lab6i/14.png)  
 
 **B. Using Docker Compose**
 Create `docker-compose.yml`:  
-![](../Screenshots/Lab6_s/lab6.12.png)
+![](../screenshots/Lab6i/15.png) 
 Run: `docker compose up -d`  
-![](../Screenshots/Lab6_s/lab6.13.png)
+![](../screenshots/Lab6i/16.png) 
 Stop: `docker compose down -v`  
-![](../Screenshots/Lab6_s/lab6.14.png)
+![](../screenshots/Lab6i/17.png) 
 
 ---
 
@@ -137,10 +137,10 @@ docker run -d \
 ```
 Student Task:
 1. Write an equivalent docker-compose.yml  
-![](../Screenshots/Lab6_s/lab6.15.png)
+![](../screenshots/Lab6i/18.png) 
 2. Ensure: Same container name, same port mapping, same environment variables, same restart policy.
 3. Run using: `docker compose up -d`  
-![](../Screenshots/Lab6_s/lab6.16.png)
+![](../screenshots/Lab6i/19.png) 
 4. Verify using: `docker compose ps`
 
 **Problem 2: Volume + Network Configuration**
@@ -165,10 +165,11 @@ docker run -d \
 ```
 Student Task:
 1. Create a single docker-compose.yml file that defines both services, creates named volume pgdata, creates custom network app-net, and uses depends_on.  
-![](../Screenshots/Lab6_s/lab6.17.png)
+![](../screenshots/Lab6i/20.png)  
 
 2. Bring up services using one command.  
-![](../Screenshots/Lab6_s/lab6.18.png)
+![](../screenshots/Lab6i/21.png)  
+
 3. Stop and remove everything properly.
 
 **Task 4: Resource Limits Conversion**
@@ -185,7 +186,8 @@ docker run -d \
 Student Task:
 1. Convert this to Docker Compose.
 2. Add resource limits using: deploy > resources > limits.  
-![](../Screenshots/Lab6_s/lab6.19.png)
+![](../screenshots/Lab6i/22.png)  
+
 
 
 ---
@@ -202,20 +204,20 @@ Scenario: You are given `docker run -d -p 3000:3000 node:18-alpine`. Now you mus
 
 **Step 1: Create app.js**  
 
-![](../Screenshots/Lab6_s/lab6.20.png)
+![](../screenshots/Lab6i/24.png)  
 
 **Step 2: Create Dockerfile**  
 
-![](../Screenshots/Lab6_s/lab6.21.png)
+![](../screenshots/Lab6i/23.png)  
 
 **Step 3: Create docker-compose.yml**  
-![](../Screenshots/Lab6_s/lab6.22.png)
+![](../screenshots/Lab6i/25.png)  
 
 Student Task:
 1. Build and run using: `docker compose up --build -d`  
-![](../Screenshots/Lab6_s/lab6.23.png)
+![](../screenshots/Lab6i/26.png) 
 2. Verify in browser: `http://localhost:3000`  
-![](../Screenshots/Lab6_s/lab6.24.png)
+![](../screenshots/Lab6i/27.png) 
 3. Modify message in app.js, rebuild and observe changes.
 4. Explain difference between `image:` and `build:`.n
 Ans: `image:` is the specification of which image to use, whereas `build:` is used to tell which `Dockerfile` to use to build the image that will be used to run the conatiner.  
@@ -228,9 +230,9 @@ Requirement: Create a simple Python FastAPI or Node production-ready app using:
 
 Must:
 1. Write multi-stage Dockerfile  
-![](../Screenshots/Lab6_s/lab6.25.png)
+![](../screenshots/Lab6i/28.png) 
 2. Use build: in Compose  
-![](../Screenshots/Lab6_s/lab6.26.png)
+![](../screenshots/Lab6i/29.png)  
 
 3. Add environment variables
 4. Add volume mount for development mode
@@ -267,7 +269,7 @@ cd wp-compose-lab
 ```
 
 **Step 2: Create docker-compose.yml**  
-![](../Screenshots/Lab6_s/lab6.27.png)
+![](../screenshots/Lab6i/31.png) 
 
 **Explanation of Key Sections**
 * **services**: Defines containers (db -> MySQL database, wordpress -> application)
@@ -278,33 +280,33 @@ cd wp-compose-lab
 
 **Step 3: Start Application**
 `docker-compose up -d`  
-![](../Screenshots/Lab6_s/lab6.28.png)
+![](../screenshots/Lab6i/33.png) 
 What happens: Images are pulled, Network is created, Containers are started, DNS-based service discovery enabled.
 
 **Step 4: Verify Containers**
 `docker ps` (Expected: wordpress_app, wordpress_db)  
-![](../Screenshots/Lab6_s/lab6.29.png)
+![](../screenshots/Lab6i/34.png) 
 
 **Step 5: Access WordPress**
 Open browser: `http://localhost:8080` (Complete setup, enter title, user, password)  
-![](../Screenshots/Lab6_s/lab6.30.png)
+![](../screenshots/Lab6i/32.png) 
 
 **Step 6: Check Volumes**
 `docker volume ls` (db_data -> database persistence, wp_data -> WordPress files)  
-![](../Screenshots/Lab6_s/lab6.31.png)
+![](../screenshots/Lab6i/35.png) 
 
 **Step 7: Stop Application**
 `docker-compose down` (Containers removed, Volumes remain intact)
-![](../Screenshots/Lab6_s/lab6.32.png)
+![](../screenshots/Lab6i/36.png) 
 
 **5. Scaling in Docker Compose**
 Method 1: Scale WordPress Containers
 `docker-compose up --scale wordpress=3`  
-![](../Screenshots/Lab6_s/lab6.33.png)
+![](../screenshots/Lab6i/37.png) 
 Result: 3 WordPress containers running.
 Problem: All try to use same port (8080), no load balancing.
 Solution: Use Reverse Proxy (Nginx). Add another service, then configure load balancing manually.
-![](../Screenshots/Lab6_s/lab6.34.png)
+![](../screenshots/Lab6i/38.png) 
 
 Limitations of Compose Scaling:
 * No built-in load balancing
@@ -314,11 +316,11 @@ Limitations of Compose Scaling:
 
 **6. Running Same Setup with Docker Swarm**
 Step 1: Initialize Swarm: `docker swarm init`  
-![](../Screenshots/Lab6_s/lab6.35.png)
+![](../screenshots/Lab6i/39.png) 
 Step 2: Deploy Stack: `docker stack deploy -c docker-compose.yml wpstack`  
-![](../Screenshots/Lab6_s/lab6.36.png)
+![](../screenshots/Lab6i/40.png) 
 Step 3: Scale Service: `docker service scale wpstack_wordpress=3`  
-![](../Screenshots/Lab6_s/lab6.37.png)
+![](../screenshots/Lab6i/41.png) 
 
 **What Changes in Swarm?**
 | Feature | Docker Compose | Docker Swarm |

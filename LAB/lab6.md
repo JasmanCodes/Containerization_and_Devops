@@ -75,7 +75,7 @@ services:
 
 **Step 1: Run Nginx Using Docker Run**
 Execute:  
-![](../screenshots/Lab6_s/lab6_1.png)  
+![](../Screenshots/Lab6_s/lab6_1.png)  
 Verify: `docker ps`  
 ![](../screenshots/Lab6i/2.png)
 Access: `http://localhost:8081`  

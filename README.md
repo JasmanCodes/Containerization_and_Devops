@@ -17,6 +17,7 @@
 - [Experiment 4](LAB/lab4.md)
 - [Experiment 5](LAB/lab5.md)
 - [Experiment 6](LAB/lab6.md)
+- [Experiment 9](LAB/lab9.md)
 
 
 ## THEORY

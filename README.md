@@ -53,6 +53,6 @@
 
 <div align="center">
 
-*Made with ❤️ by Jasman Singh — UPES*
+*Made by Jasman Singh — UPES*
 
 </div>

@@ -86,14 +86,13 @@ networks:
 ```bash
 docker-compose up -d
 ```
-![Start Compose](./Images/2.png)
-
+![Start Compose](../Screenshots/Lab10_s/lab10.1.png)
 
 **Step-3:- Verify SonarQube is running via Logs**
 ```bash
 docker-compose logs -f sonarqube
 ```
-![Verify SonarQube](./Images/3.png)
+![Verify SonarQube](../Screenshots/Lab10_s/lab10.2.png)
 
 
 **Step-4:- Login to SonarQube**
@@ -103,12 +102,12 @@ http://localhost:9000
 - username: `admin`
 - password: `admin`
 
-![Login](./Images/4.png)
+![Login](../Screenshots/Lab10_s/lab10.3.png)
 
 
 **Step-5:- HomePage**
 
-![HomePage](./Images/5.png)
+![HomePage](../Screenshots/Lab10_s/lab10.4.png)
 
 
 **Step-6:- Create Sample Java App**
@@ -116,7 +115,7 @@ http://localhost:9000
 mkdir -p sample-java-app/src/main/java/com/example
 cd sample-java-app
 ```
-![Create Sample Java App](./Images/6.png)
+![Create Sample Java App](../Screenshots/Lab10_s/lab10.5.png)
 
 
 **Step-7:- Create `Calculator.java`**
@@ -177,8 +176,7 @@ public class Calculator {
     }
 }
 ```
-![Create Java File](./Images/7.png)
-
+![Create Java File](../Screenshots/Lab10_s/lab10.6.png)
 
 **Step-8:- Create `pom.xml`**
 ```bash
@@ -231,7 +229,7 @@ nano pom.xml
 
 </project>
 ```
-![Create pom.xml file](./Images/8.png)
+![Create pom.xml file](../Screenshots/Lab10_s/lab10.7.png)
 
 
 **Step-9:- Generate Token**
@@ -243,8 +241,7 @@ Navigate to: **Profile → My Account → Security**
 
 > **Important:** Store the token somewhere safe. You cannot retrieve it again after closing the page.
 
-![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](./Images/9.png)
-
+![Create Token squ_3ff1e919d247a9f0c7e045e100670da001860bd0](../Screenshots/Lab10_s/lab10.8.png)
 
 **Step-10:- Run Scanner**
 
@@ -252,12 +249,12 @@ Navigate to: **Profile → My Account → Security**
 ```bash
 mvn sonar:sonar -Dsonar.login=TOKEN
 ```
-![Run Scanner](./Images/10.png)
+![Run Scanner](../Screenshots/Lab10_s/lab10.9.png)
 
 
 **Step-11:- Scroll down to verify Build Success**
 
-![Success Verify](./Images/11.png)
+![Success Verify](../Screenshots/Lab10_s/lab10.10.png)
 
 
 **Step-12:- View Analysis Results on Browser**
@@ -266,7 +263,7 @@ Open the dashboard:
 ```
 http://localhost:9000/dashboard?id=sample-java-app
 ```
-![List Test](./Images/12.png)
+![List Test](../Screenshots/Lab10_s/lab10.11.png)
 
 
 **Step-13:- View Detailed Report**

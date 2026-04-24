@@ -1,4 +1,4 @@
-# Experiment 12 — Kubernetes: Deploying and Managing a WordPress Application
+# Experiment 12 — Study and Analyse Container Orchestration using Kubernetes
 
 ## Objective
 

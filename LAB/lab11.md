@@ -89,7 +89,7 @@ docker compose down
 docker ps
 ```
 
-![docker compose down and docker ps output](./images/image1_compose_down_docker_ps.png)
+![docker compose down and docker ps output](../Screenshots/Lab11_s/lab11.2.png)
 
 ---
 
@@ -101,7 +101,7 @@ Initialize the current machine as a Swarm manager node using `docker swarm init`
 docker swarm init
 ```
 
-![docker swarm init output](./images/image2_swarm_init.png)
+![docker swarm init output](../Screenshots/Lab11_s/lab11.3.png)
 
 ---
 
@@ -113,7 +113,7 @@ List all nodes in the Swarm to confirm the manager node is active.
 docker node ls
 ```
 
-![docker node ls output](./images/image3_node_ls.png)
+![docker node ls output](../Screenshots/Lab11_s/lab11.4.png)
 
 ---
 
@@ -125,7 +125,7 @@ Deploy the WordPress stack using the `docker-compose.yml` file with the stack na
 docker stack deploy -c docker-compose.yml wpstack
 ```
 
-![docker stack deploy output](./images/image4_stack_deploy.png)
+![docker stack deploy output](../Screenshots/Lab11_s/lab11.5.png)
 
 ---
 
@@ -137,7 +137,7 @@ Verify that all services in the stack are running correctly.
 docker service ls
 ```
 
-![docker service ls output](./images/image5_service_ls.png)
+![docker service ls output](../Screenshots/Lab11_s/lab11.6.png)
 
 ---
 
@@ -149,7 +149,7 @@ View the tasks (containers) running for the `wpstack_wordpress` service.
 docker service ps wpstack_wordpress
 ```
 
-![docker service ps wpstack_wordpress output](./images/image6_service_ps_wordpress.png)
+![docker service ps wpstack_wordpress output](../Screenshots/Lab11_s/lab11.7.png)
 
 ---
 
@@ -161,7 +161,7 @@ List all running containers to confirm the WordPress and MySQL containers are ac
 docker ps
 ```
 
-![docker ps output](./images/image7_docker_ps.png)
+![docker ps output](../Screenshots/Lab11_s/lab11.8.png)
 
 ---
 
@@ -173,7 +173,7 @@ Scale the WordPress service to 3 replicas to demonstrate horizontal scaling.
 docker service scale wpstack_wordpress=3
 ```
 
-![docker service scale output](./images/image8_service_scale.png)
+![docker service scale output](../Screenshots/Lab11_s/lab11.9.png)
 
 ---
 
@@ -185,7 +185,7 @@ Confirm that 3 replicas of the WordPress service are now running.
 docker service ps wpstack_wordpress
 ```
 
-![docker service ps after scaling](./images/image9_service_ps_after_scale.png)
+![docker service ps after scaling](../Screenshots/Lab11_s/lab11.10.png)
 
 ---
 

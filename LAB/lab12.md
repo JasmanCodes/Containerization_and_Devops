@@ -68,7 +68,7 @@ spec:
 ```
 
 > **Screenshot:**
-> ![wordpress-deployment.yaml in nano editor](lab12_1.png)
+> ![wordpress-deployment.yaml in nano editor](../Screenshots/Lab12_s/lab12.1.png)
 
 ---
 
@@ -87,7 +87,7 @@ deployment.apps/wordpress created
 ```
 
 > **Screenshot:**
-> ![minikube start and kubectl apply output](lab12_2.png)
+> ![minikube start and kubectl apply output](../Screenshots/Lab12_s/lab12.2.png)
 
 **Observations:**
 - Minikube v1.38.1 started on Ubuntu 22.04 using the Docker driver
@@ -123,7 +123,7 @@ spec:
 ```
 
 > **Screenshot:**
-> ![wordpress-service.yaml in nano editor](lab12_3.png)
+> ![wordpress-service.yaml in nano editor](../Screenshots/Lab12_s/lab12.3.png)
 
 ---
 
@@ -139,7 +139,7 @@ service/wordpress-service created
 ```
 
 > **Screenshot:**
-> ![kubectl apply service output](lab12_4.png)
+> ![kubectl apply service output](../Screenshots/Lab12_s/lab12.4.png)
 
 ---
 
@@ -159,8 +159,7 @@ kubectl get pods
 | wordpress-6698dd7d66-hv455 | 1/1 | Running | 0 | 2m4s |
 
 > **Screenshot:**
-> ![kubectl get pods showing 2 running pods](lab12_5.png)
-
+> ![kubectl get pods showing 2 running pods](../Screenshots/Lab12_s/lab12.5.png)
 Both pods are in **Running** state as expected, matching the `replicas: 2` setting in the deployment.
 
 ---
@@ -181,7 +180,7 @@ kubectl get svc
 | wordpress-service | NodePort | 10.106.38.175 | \<none\> | 80:30007/TCP | 31s |
 
 > **Screenshot:**
-> ![kubectl get svc output](lab12_6.png)
+> ![kubectl get svc output](../Screenshots/Lab12_s/lab12.6.png)
 
 The `wordpress-service` is exposed on **port 30007** externally via NodePort.
 
@@ -201,7 +200,7 @@ deployment.apps/wordpress scaled
 ```
 
 > **Screenshot:**
-> ![kubectl scale deployment output](lab12_7.png)
+> ![kubectl scale deployment output](../Screenshots/Lab12_s/lab12.7.png)
 
 ---
 
@@ -223,7 +222,7 @@ kubectl get pods
 | wordpress-6698dd7d66-tqvf2 | 1/1 | Running | 0 | 15s |
 
 > **Screenshot:**
-> ![kubectl get pods showing 4 running pods](lab12_8.png)
+> ![kubectl get pods showing 4 running pods](../Screenshots/Lab12_s/lab12.8.png)
 
 Two new pods (`n95mf` and `tqvf2`) were created automatically by the Deployment controller.
 
@@ -243,7 +242,7 @@ pod "wordpress-6698dd7d66-cs5hx" deleted from default namespace
 ```
 
 > **Screenshot:**
-> ![kubectl delete pod output](lab12_9.png)
+> ![kubectl delete pod output](../Screenshots/Lab12_s/lab12.9.png)
 
 ---
 
@@ -265,7 +264,7 @@ kubectl get pods
 | wordpress-6698dd7d66-zmch7 | 1/1 | Running | 0 | 20s |
 
 > **Screenshot:**
-> ![kubectl get pods showing 4 running pods after self-healing](lab12_10.png)
+> ![kubectl get pods showing 4 running pods after self-healing](../Screenshots/Lab12_s/lab12.10.png)
 
 The deleted pod `cs5hx` was replaced by a new pod `zmch7` (age: 20s). The total pod count remains **4**, confirming Kubernetes' self-healing behavior.
 

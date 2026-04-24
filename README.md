@@ -17,6 +17,7 @@
 - [Experiment 4](LAB/lab4.md)
 - [Experiment 5](LAB/lab5.md)
 - [Experiment 6](LAB/lab6.md)
+- [Experiment 7](LAB/lab7.md)
 - [Experiment 9](LAB/lab9.md)
 - [Experiment 10](LAB/lab10.md)
 - [Experiment 11](LAB/lab11.md)

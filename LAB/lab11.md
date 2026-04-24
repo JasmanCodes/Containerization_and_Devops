@@ -1,4 +1,4 @@
-# Experiment 11: Container Orchestration with Docker Stack
+<img width="750" height="27" alt="image" src="https://github.com/user-attachments/assets/713aea9f-e36e-48a6-aef0-5661cef4fc29" /># Experiment 11: Container Orchestration with Docker Stack
 
 ## Objective
 
@@ -187,7 +187,7 @@ Use `grep` to filter and display only the running WordPress containers.
 docker ps | grep wordpress
 ```
 
-![docker ps grep wordpress output](./images/image10_docker_ps_grep_wordpress.png)
+![docker ps grep wordpress output](../Screenshots/Lab11_s/lab11.11.png)
 
 ---
 

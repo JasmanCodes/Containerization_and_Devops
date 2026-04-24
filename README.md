@@ -1,4 +1,4 @@
-# 🐳 Containerization & DevOps
+<h1 align="center">🐳 Containerization & DevOps</h1>
 
 <p align="center">
   <a href="https://github.com/JasmanCodes/Containerization_and_Devops"><img src="https://img.shields.io/badge/GitHub-JasmanCodes-181717?style=for-the-badge&logo=github" /></a>

@@ -1,33 +1,58 @@
-# Containerization & DevOps
+<div align="center">
 
-## 🔗 Repository Link
+# 🐳 Containerization & DevOps
 
-[Click here to view the GitHub Repository](https://github.com/JasmanCodes/Containerization_and_Devops)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-JasmanCodes-181717?style=for-the-badge&logo=github)](https://github.com/JasmanCodes/Containerization_and_Devops)
+![University](https://img.shields.io/badge/UPES-0057A8?style=for-the-badge)
+![Course](https://img.shields.io/badge/Containerization%20%26%20DevOps-FF6B35?style=for-the-badge)
 
-**Name:** Jasman Singh  
-**University:** UPES  
-**Course:** Containerization and DevOps  
+**Jasman Singh** · UPES · Containerization and DevOps
+
+</div>
+
+---
+
+## 🗂️ Repository Structure
+
+```
+📦 Containerization_and_Devops
+ ┣ 📁 LAB/                    ← Hands-on lab experiments
+ ┣ 📁 project_assignment/     ← Project & assignment reports
+ ┣ 📁 CLASSWORK/              ← In-class assignments
+ ┗ 📄 README.md
+```
 
 ---
 
-## LAB
-- [Experiment 1](LAB/lab1.md)
-- [Experiment 2](LAB/lab2.md)
-- [Experiment 3](LAB/lab3.md)
-- [Experiment 4](LAB/lab4.md)
-- [Experiment 5](LAB/lab5.md)
-- [Experiment 6](LAB/lab6.md)
-- [Experiment 7](LAB/lab7.md)
-- [Experiment 9](LAB/lab9.md)
-- [Experiment 10](LAB/lab10.md)
-- [Experiment 11](LAB/lab11.md)
-- [Experiment 12](LAB/lab12.md)
+## 🧪 Lab Experiments
 
-
-## THEORY
-- [ProjectAssignment 1](project_assignment/report.md)
-- [Class_Assignment](CLASSWORK/class_assign.md)
-
-
+| # | Experiment | Link |
+|---|-----------|------|
+| 01 | Experiment 1 | [📄 View](LAB/lab1.md) |
+| 02 | Experiment 2 | [📄 View](LAB/lab2.md) |
+| 03 | Experiment 3 | [📄 View](LAB/lab3.md) |
+| 04 | Experiment 4 | [📄 View](LAB/lab4.md) |
+| 05 | Experiment 5 | [📄 View](LAB/lab5.md) |
+| 06 | Experiment 6 | [📄 View](LAB/lab6.md) |
+| 07 | Experiment 7 | [📄 View](LAB/lab7.md) |
+| 09 | Experiment 9 | [📄 View](LAB/lab9.md) |
+| 10 | Experiment 10 | [📄 View](LAB/lab10.md) |
+| 11 | Experiment 11 | [📄 View](LAB/lab11.md) |
+| 12 | Experiment 12 — Kubernetes | [📄 View](LAB/lab12.md) |
 
 ---
+
+## 📝 Assignments
+
+| Type | Title | Link |
+|------|-------|------|
+| 🎯 Project | Project Report | [📄 View](project_assignment/report.md) |
+| 📋 Classwork | Class Assignment | [📄 View](CLASSWORK/class_assign.md) |
+
+---
+
+<div align="center">
+
+*Made with ❤️ by Jasman Singh — UPES*
+
+</div>

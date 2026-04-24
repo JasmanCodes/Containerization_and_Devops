@@ -177,19 +177,9 @@ docker service scale wpstack_wordpress=3
 
 ---
 
-### Step 9: Verify Scaled Tasks
 
-Confirm that 3 replicas of the WordPress service are now running.
 
-```bash
-docker service ps wpstack_wordpress
-```
-
-![docker service ps after scaling](../Screenshots/Lab11_s/lab11.10.png)
-
----
-
-### Step 10: Filter WordPress Containers
+### Step 9: Filter WordPress Containers
 
 Use `grep` to filter and display only the running WordPress containers.
 
@@ -201,7 +191,7 @@ docker ps | grep wordpress
 
 ---
 
-### Step 11: Remove the Stack
+### Step 10: Remove the Stack
 
 Clean up by removing the entire `wpstack` stack.
 
@@ -209,7 +199,7 @@ Clean up by removing the entire `wpstack` stack.
 docker stack rm wpstack
 ```
 
-![docker stack rm wpstack output](./images/image11_stack_rm.png)
+![docker stack rm wpstack output](../Screenshots/Lab11_s/lab11.10.png)
 
 ---
 

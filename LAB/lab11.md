@@ -76,7 +76,7 @@ docker node ls
 
 The following stack file defines the WordPress and MySQL services used in this experiment:
 
-![docker-compose.yml file](./images/image0_docker_compose_file.png)
+![docker-compose.yml file](../Screenshots/Lab11_s/lab11.1.png)
 
 ---
 

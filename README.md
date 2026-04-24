@@ -1,14 +1,12 @@
-<div align="center">
-
 # 🐳 Containerization & DevOps
 
-[![GitHub Repo](https://img.shields.io/badge/GitHub-JasmanCodes-181717?style=for-the-badge&logo=github)](https://github.com/JasmanCodes/Containerization_and_Devops)
-![University](https://img.shields.io/badge/UPES-0057A8?style=for-the-badge)
-![Course](https://img.shields.io/badge/Containerization%20%26%20DevOps-FF6B35?style=for-the-badge)
+<p align="center">
+  <a href="https://github.com/JasmanCodes/Containerization_and_Devops"><img src="https://img.shields.io/badge/GitHub-JasmanCodes-181717?style=for-the-badge&logo=github" /></a>
+  <img src="https://img.shields.io/badge/UPES-0057A8?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Containerization%20%26%20DevOps-FF6B35?style=for-the-badge" />
+</p>
 
-**Jasman Singh** · UPES · Containerization and DevOps
-
-</div>
+<p align="center"><strong>Jasman Singh</strong> · UPES · Containerization and DevOps</p>
 
 ---
 
@@ -51,8 +49,4 @@
 
 ---
 
-<div align="center">
-
-*Made by Jasman Singh — UPES*
-
-</div>
+<p align="center"><em>Made with ❤️ by Jasman Singh — UPES</em></p>

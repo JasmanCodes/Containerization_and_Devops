@@ -270,6 +270,6 @@ http://localhost:9000/dashboard?id=sample-java-app
 
 Click on any issue number to see the exact line and reason for each issue.
 
-![View Report](./Images/13.png)
+![View Report](../Screenshots/Lab10_s/lab10.12.png)
 
 
